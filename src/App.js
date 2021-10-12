@@ -4,7 +4,9 @@ import Header from "./Components/Header/Header";
 import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login";
 import Notfound from "./Components/Notfound/Notfound";
+import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import Register from "./Components/Register/Register";
+import Shipping from "./Components/Shipping/Shipping";
 import AuthProvider from "./context/AuthProvider";
 
 function App() {
@@ -26,7 +28,9 @@ function App() {
                         <Route path="/register">
                             <Register></Register>
                         </Route>
-                        <Route path="/shipping"></Route>
+                        <PrivateRoute path="/shipping">
+                            <Shipping></Shipping>
+                        </PrivateRoute>
                         <Route path="*">
                             <Notfound></Notfound>
                         </Route>
