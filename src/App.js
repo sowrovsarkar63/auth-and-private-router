@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./Components/Header/Header";
 import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login";
+import Notfound from "./Components/Notfound/Notfound";
 import Register from "./Components/Register/Register";
 
 function App() {
@@ -23,9 +24,9 @@ function App() {
                     <Route path="/register">
                         <Register></Register>
                     </Route>
-                    {/*  <Route path="*">
-                        <NotFound></NotFound>
-                    </Route> */}
+                    <Route path="*">
+                        <Notfound></Notfound>
+                    </Route>
                 </Switch>
             </BrowserRouter>
         </div>

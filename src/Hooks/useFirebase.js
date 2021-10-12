@@ -8,6 +8,8 @@ const useFirebase = () => {
     initializeAuthentication();
     const auth = getAuth();
     const provider = new GoogleAuthProvider();
+
+    // google sign in
     const signInUsingGoogle = () => {
         signInWithPopup(auth, provider)
             .then((result) => {
@@ -20,6 +22,9 @@ const useFirebase = () => {
                 setError(errorMessage);
             });
     };
+
+    // Return everythign as a object
+
     return {
         user,
         error,
