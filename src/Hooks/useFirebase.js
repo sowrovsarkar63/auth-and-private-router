@@ -42,7 +42,6 @@ const useFirebase = () => {
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
             if (user) {
-                console.log("inside state change", user);
                 setuser(user);
             } else {
                 // singout
